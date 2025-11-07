@@ -2700,7 +2700,7 @@ func (s *SmD) doRedfishEndpointsPost(w http.ResponseWriter, r *http.Request) {
 					sendJsonError(w, http.StatusInternalServerError,
 						fmt.Sprintf("failed parsing post data (V2): %v", err))
 				}
-			} else {-
+			} else {
 				// This routes legacy requests (schemaVersion <= 0) to the old parser
 				err = s.parseRedfishEndpointData(w, eps, body) 
 				if err != nil {
